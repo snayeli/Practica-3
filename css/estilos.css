@@ -1,0 +1,124 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+body{
+	font-family: arial,sans-serif;
+	font-size: 16px;
+	background: #232323;
+}
+
+.contenedor{ 
+	width: 90%;/*archura se maneja por porcentaje*/
+	margin: 20px auto;
+	overflow: hidden; /*Para colocar elementos en linea*/
+}
+header{
+	background: #ff3b3f;
+}
+header nav{
+	width: 90%;
+
+}
+header nav ul{
+	width: 100%;
+	overflow: hidden;
+	list-style: none;
+}
+header nav ul li{ /** para ordenar en vertical**/
+	float: left;
+}
+header nav ul li a{
+	text-decoration:  none;
+	display: inline-block;
+	padding: 15px 20px;
+	color: ff3b3f;
+}
+header nav ul a:hover {
+	background: #a9a9a9 ;
+	color: #0;
+
+}
+.main{
+	width: 70%; /*Antes eran 700px*/
+	background: #0a3143;
+	float: left;
+}
+.main .imagen img{
+	width: 100%;
+	vertical-align: top;
+
+}
+.main .ref{
+	padding: 40px;
+}
+.main .ref article h2{
+	margin-bottom: 20px;
+	color:  #a9a9a9;
+}
+.main .ref article p{
+	margin-bottom: 20px;
+	line-height: 27px;
+	color:  #f1ece7;
+}
+aside{
+	width: 30%;
+	padding: 20px;
+	color: #f2aa1f;
+	background: #250d14;
+	float: left;
+}
+aside .lateral{
+	margin-bottom: 20px;
+}
+
+aside .lateral .titulo{
+	color: #e8e8e7;
+	border-bottom: 1px solid;
+	margin-bottom: 10px;
+}
+aside .lateral ul{
+	list-style: none;
+}
+aside .lateral ul li{
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+aside .lateral ul li a{
+	color: #ff8478;
+	text-decoration: none;
+}
+aside .lateral ul li a:hover{
+	color: #3c0000;
+}
+aside .lateral p{
+	line-height: 27px;
+}
+footer{
+	width: 70%;
+	background: #33122A;
+	color:  #fff;
+	padding: 15px 0;
+	text-align: center;
+}
+
+/*uso de mediqueries*//*Para las anchuras de la pagina en diferentes dispositivos*/
+@media screen and (max-width:  600px){
+	.main{
+		width:  100%;
+		font-size: 12px;
+		background: #423232; /*Cafe*/
+	}
+	aside{
+		width: 100%;
+	}
+	footer{
+		width: 100%;
+	}
+@media screen and (min-width:  800px){
+	body{
+		background: white;
+	}
+
+}
