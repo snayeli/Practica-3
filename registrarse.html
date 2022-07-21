@@ -3,42 +3,46 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"> 
-	<title>Calculadora</title>
+	<title>registrarse</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<style>
-		.main .imagen{
-
-
-				background-image: url("img/calculadorauwu.png");
-				background-position-x: center;
-				background-position-y: center;
-				background-repeat: no-repeat;
-				background-size: 400px;
-				/*background-attachment: fixed;*/
-			}
-		form p{
-			text-align: center;
+		.caja{
+			width: 80%;
+			margin: 40px;
+		}
+		.formulario .caja-inputs{
+			padding: 20px;
+			background: gray;
+			border-radius: 6px 6px 0 0;
+		}
+		.formulario input[type="text"], .formulario input[type="correo"]{
+			display: block;
+			width: 100%;
 			margin-bottom: 20px;
-			font-size: 30px;
-		}
-		input[type="text"]{
-			width: 20%;
-			padding: 20px;
-			text-align: center;
-		}
-		form.btn{
-			width: 15%;
-			background: #AC7B7C;
-			color: whitesmoke;
+			padding: 15px 10px;
 			border: none;
-			cursor: pointer;
-			font-size: 16px;
-			text-align: center;
-			padding: 20px;
-			display: inline-block;
-			text-decoration: none;
+			margin-bottom: 2px solid #ccc;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
 		}
-
+		.formulario input[type="text"]:focus, .formulario inputs[type="correo"]{
+			border-bottom: 2px solid #246eb9;
+		}
+		.formularioinput[type="radio"]{
+			display: none;
+		}
+		.formulario .sexo{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+		.formulario .sexo .hombre{
+			border-radius: 3px 0 0 3px; /*izquierda derecha*/
+		}
+		.formulario .sexo .mujer{
+			border-radius: 0 3px 3px 0; /*izquierda derecha*/
+		}
 
 
 	</style>
@@ -47,7 +51,8 @@
 
 	<div class="contenedor">
 		<header>
-			<nav>
+		
+					<nav>
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
 					<li><a href="calculadora.html">Calculadora</a></li>
@@ -56,24 +61,36 @@
 				</ul>
 			</nav>
 		</header>
+
 		<section class="main">
-			<div class="imagen">
-				<h2>Calculadora</h2>
-				<p>El siguiente formulario realiza las acciones de una calculadora</p>
+
+			<div class="caja">
+				<form action="" class="formulario" id="formulario" name="formulario">
+					<div class="caja-input"> 
+						<input type="text" name="nombre" placeholder="Nombre">
+						<input type="text" name="correo" placeholder="Correo">
+						<div class="sexo">
+							<input type="radio" name="sexo" id="hombre" value="Hombre">
+							<label class="hombre" form="hombre">Hombre</label>
+							<input type="radio" name="sexo" id="mujer" value="Mujer">
+							<label class="mujer" form="mujer">Mujer</label>
+						</div>
+						<div class="terminos">
+							<input type="checkbox" name="terminos" id="terminos">
+							<label form="terminos">Acepto los terminos y condiciones</label>
+						</div>
+					
+					<ul class="error">
+						<li>Error1</li>
+						<li>Error2</li>
+					</ul>
+				</div>
+				<input type="submit" class="btn" value="Registrarse">
+				</form> 
+
 			</div>
-			<section class="ref">
-				<article>
-					<form action="">
-						<input type="text" id="numero1"> 
-						<p>+</p>
-						<input type="text" id="numero2">
-						<p>=</p>
-						<input type="text" id="resultado" readonly>
-						<input type="button" onclick="suma()" class="btn" value="resultado">
-						
-					</form>
-				</article>
-			</section>
+
+			
 
 		</section>
 		<aside>
