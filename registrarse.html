@@ -4,9 +4,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"> 
 	<title>registrarse</title>
+	<link href="http://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&family=Slabo+27px&display=swap" real="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<style>
 		.caja{
+			background: #474747;
+			font-size: 18px;
 			width: 80%;
 			margin: 40px;
 		}
@@ -25,10 +28,10 @@
 			font-family: 'Slabo 27px', serif;
 			font-size: 18px;
 		}
-		.formulario input[type="text"]:focus, .formulario inputs[type="correo"]{
+		.formulario input[type="text"]:focus, .formulario input[type="correo"]{
 			border-bottom: 2px solid #246eb9;
 		}
-		.formularioinput[type="radio"]{
+		.formulario input[type="radio"]{
 			display: none;
 		}
 		.formulario .sexo{
@@ -38,13 +41,53 @@
 			margin-bottom: 20px;
 		}
 		.formulario .sexo .hombre{
-			border-radius: 3px 0 0 3px; /*izquierda derecha*/
+			border-radius: 5px 0 0 5px; /*izquierda derecha*/
 		}
 		.formulario .sexo .mujer{
-			border-radius: 0 3px 3px 0; /*izquierda derecha*/
+			border-radius: 0 5px 5px 0; /*izquierda derecha*/
 		}
-
-
+		.formulario .label-radio{
+			background: rgb(249, 160, 8); /*El .4 es una transparencia*/
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			width: 49%;
+		}
+		.formulario input[type="radio"]:checked + .label-radio{
+			background: #f9a03f;
+		}
+		.formulario .terminos{
+			text-align: center;
+			color: #474747;
+		}
+		.formulario .terminos laabel{
+			margin-left: 10px;
+		}
+		.formulario .terminos{
+			display: none; /*Se encarga de ocultar la seccion de errores*/
+			margin-top: 20px;
+			border-radius: 3px;
+			background: #350a06;
+			color: #350a06;
+			padding: 15px 10px;
+			padding-left: 40px;
+		}
+		.formulario .btn{
+			width: 100%;
+			text-align: center;
+			background: #246eb9;
+			color: #fff;
+			border: none;
+			display: block;
+			padding: 15px 10px;
+			cursor: pointer;
+			border-radius: 0 0 6px 6px;
+			font-family: 'Slabo 27px', serif;
+			font-size: 18px;
+		}
+		.formulario .btn:hover{
+			background: #4357ad;
+		}
 	</style>
 </head>
 <body>
@@ -71,28 +114,21 @@
 						<input type="text" name="correo" placeholder="Correo">
 						<div class="sexo">
 							<input type="radio" name="sexo" id="hombre" value="Hombre">
-							<label class="hombre" form="hombre">Hombre</label>
+							<label class="label-radio hombre" form="hombre">Hombre</label>
 							<input type="radio" name="sexo" id="mujer" value="Mujer">
-							<label class="mujer" form="mujer">Mujer</label>
+							<label class="label-radio mujer" form="mujer">Mujer</label>
 						</div>
 						<div class="terminos">
 							<input type="checkbox" name="terminos" id="terminos">
 							<label form="terminos">Acepto los terminos y condiciones</label>
 						</div>
-					
-					<ul class="error">
-						<li>Error1</li>
-						<li>Error2</li>
-					</ul>
-				</div>
-				<input type="submit" class="btn" value="Registrarse">
+						<ul class="error" id="error"></ul>
+					</div>
+					<input type="submit" class="btn" value="Registrarse">
 				</form> 
 
-			</div>
-
-			
-
-		</section>
+	</div>
+</section>
 		<aside>
 		<div class="lateral">
 			<h3 class="titulo">Nuevos productos </h3>
@@ -121,7 +157,7 @@
 		</footer>
 	</div>
 
-<script src="js/acciones.js"></script>
+<script src="js/acciones2.js"></script>
 
 </body>
 </html>
